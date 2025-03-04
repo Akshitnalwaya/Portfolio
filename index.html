@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akshit Nalwaya Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top">&#8679;</button>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Akshit Nalwaya</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="burger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Particles and Typed Text -->
+  <section id="hero">
+    <div id="particles-js"></div>
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Hi, I'm Akshit Nalwaya</h1>
+      <h2 id="typed"></h2>
+      <a href="#portfolio" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <!-- About Section with Animated Counters -->
+  <section id="about" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I am a passionate web developer and designer dedicated to creating visually stunning and interactive digital experiences. With expertise in modern web technologies, I bring innovative ideas to life.
+          </p>
+          <div class="counters">
+            <div class="counter">
+              <h3 data-target="5">0</h3>
+              <p>Years Experience</p>
+            </div>
+            <div class="counter">
+              <h3 data-target="50">0</h3>
+              <p>Projects Completed</p>
+            </div>
+            <div class="counter">
+              <h3 data-target="100">0</h3>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <!-- Replace with your own profile picture -->
+          <img src="dp2.jpeg" alt="Akshit Nalwaya">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section with Filtering & Modal -->
+  <section id="portfolio" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item" data-category="web">
+          <img src="project1.jpg" alt="Project 1">
+          <div class="portfolio-info">
+            <h3>Web Project 1</h3>
+            <p>Responsive and modern design.</p>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="design">
+          <img src="project2.jpeg" alt="Project 2">
+          <div class="portfolio-info">
+            <h3>Design Project</h3>
+            <p>Innovative graphic design.</p>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="mobile">
+          <img src="design-process-concept-landing-page_23-2148313670.jpg" alt="Project 3">
+          <div class="portfolio-info">
+            <h3>Mobile App</h3>
+            <p>Sleek and intuitive UI.</p>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="web">
+          <img src="images.jpg" alt="Project 4">
+          <div class="portfolio-info">
+            <h3>Web Project 2</h3>
+            <p>Interactive user experiences.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="modalClose" class="modal-close">&times;</span>
+      <img id="modalImg" src="" alt="Project Image">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Akshit Nalwaya. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Particles.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Main JS -->
+  <script src="main.js"></script>
+</body>
+</html>
