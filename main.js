@@ -206,3 +206,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
+// Form submission logic
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = {
+      name: contactForm.name.value,
+      email: contactForm.email.value,
+      message: contactForm.message.value
+    };
+
+    try {
+      const response = await fetch("/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+      alert(result.message || "Submitted!");
+      contactForm.reset(); // clear form
+    } catch (err) {
+      alert("Error submitting the form. Please try again later.");
+      console.error(err);
+    }
+  });
+}
