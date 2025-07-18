@@ -219,7 +219,7 @@ if (contactForm) {
     };
 
     try {
-      const response = await fetch("/submit", {
+      const response = await fetch("/api/submit", { // updated route
         method: "POST",
         headers: {
           "Content-Type": "application/json"
